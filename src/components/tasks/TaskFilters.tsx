@@ -162,6 +162,12 @@ const TaskFilters = ({
     onClearFilters();
   };
 
+  const handleDateChange = (name: "startDate" | "endDate", date: Date | null) => {
+    console.log(`${name} changed to:`, date);
+    console.log(`${name} ISO string:`, date?.toISOString());
+    onFilterChange(name, date);
+  };
+
   return (
     <Paper sx={{ p: 2, mb: 2 }}>
       <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -247,14 +253,24 @@ const TaskFilters = ({
           <DatePicker
             label="시작일"
             value={filters.startDate}
-            onChange={(date) => onFilterChange("startDate", date)}
-            slotProps={{ textField: { size: "small" } }}
+            onChange={(date) => handleDateChange("startDate", date)}
+            slotProps={{
+              textField: {
+                size: "small",
+                helperText: "작업이 이 날짜 이후에 시작하고"
+              }
+            }}
           />
           <DatePicker
             label="종료일"
             value={filters.endDate}
-            onChange={(date) => onFilterChange("endDate", date)}
-            slotProps={{ textField: { size: "small" } }}
+            onChange={(date) => handleDateChange("endDate", date)}
+            slotProps={{
+              textField: {
+                size: "small",
+                helperText: "이 날짜 이전에 종료되는 작업 검색"
+              }
+            }}
           />
         </LocalizationProvider>
         {/* 필 초기화 버튼 */}
