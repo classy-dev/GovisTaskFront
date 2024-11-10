@@ -132,10 +132,20 @@ export default function TaskCard({
           {showDates && (
             <Grid item xs={12} sm={12}>
               <Typography variant="body2" color="text.secondary">
-                {format(new Date(task.start_date), "yyyy-MM-dd")} ~
-                {task.completed_at
+                {format(new Date(task.start_date), "yyyy-MM-dd")} ~{" "}
+                {task.status === "DONE" && task.completed_at
                   ? format(new Date(task.completed_at), "yyyy-MM-dd")
                   : format(new Date(task.due_date), "yyyy-MM-dd")}
+                {task.status === "DONE" && task.completed_at && (
+                  <Typography
+                    component="span"
+                    variant="caption"
+                    color="text.secondary"
+                    sx={{ ml: 1 }}
+                  >
+                    (예정: {format(new Date(task.due_date), "yyyy-MM-dd")})
+                  </Typography>
+                )}
               </Typography>
             </Grid>
           )}

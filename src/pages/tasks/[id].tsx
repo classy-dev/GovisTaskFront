@@ -379,12 +379,23 @@ function TaskDetailPage() {
                 color="text.secondary"
                 gutterBottom
               >
-                시작일 ~ 마감일
+                예정 시작일 ~ 예정 마감일
               </Typography>
               <Typography>
                 {format(new Date(task.start_date), "yyyy-MM-dd")} ~{" "}
-                {format(new Date(task.due_date), "yyyy-MM-dd")}
+                {task.status === "DONE" && task.completed_at ? (
+                  <>
+                    {format(new Date(task.due_date), "yyyy-MM-dd")}                   
+                  </>
+                ) : (
+                  format(new Date(task.due_date), "yyyy-MM-dd")
+                )}
               </Typography>
+              {task.completed_at && task.status === "DONE" && (
+                <Typography variant="body2" color="success.main" sx={{ mt: 0.5 }}>
+                  실제 완료일: {format(new Date(task.completed_at), "yyyy-MM-dd")}
+                </Typography>
+              )}
             </Grid>
 
             <Grid item xs={12} md={2}>
@@ -508,7 +519,7 @@ function TaskDetailPage() {
                 height: "80%",
               }}
             >
-              {/* 전체 수정 버튼 (관리자 또는 부서 상급자인 경��) */}
+              {/* 전체 수정 버튼 (관리자 또는 부서 상급자인 경) */}
               {(isAdmin() || isDepartmentSuperior()) && (
                 <Button
                   variant="outlined"

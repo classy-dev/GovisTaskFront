@@ -35,6 +35,7 @@ interface EditTaskForm {
   department: number;
   start_date: Date | null;
   due_date: Date | null;
+  completed_at: Date | null;
   estimated_hours: number;
   actual_hours?: number;
   difficulty: TaskDifficulty;
@@ -129,6 +130,7 @@ function EditTaskPage() {
         department: task.department,
         start_date: new Date(task.start_date),
         due_date: new Date(task.due_date),
+        completed_at: task.completed_at ? new Date(task.completed_at) : null,
         estimated_hours: task.estimated_hours,
         actual_hours: task.actual_hours,
         difficulty: task.difficulty,
@@ -431,6 +433,20 @@ const renderDepartmentOptions = (departments: any[]) => {
                     textField: {
                       fullWidth: true,
                       required: true,
+                    },
+                  }}
+                />
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <DatePicker
+                  label="실제 마감일"
+                  value={form.completed_at}
+                  onChange={(date) => handleChange("completed_at", date)}
+                  slotProps={{
+                    textField: {
+                      fullWidth: true,
+                      helperText: "작업이 실제로 완료된 날짜",
                     },
                   }}
                 />
