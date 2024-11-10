@@ -516,7 +516,7 @@ function UserDetailPage() {
               <TaskCard
                 key={task.id}
                 task={task}
-                showDates // 날짜 표시 prop 추가
+
                 // 작업 점수 표시 prop 추가      showScore
               />
             ))
