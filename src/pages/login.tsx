@@ -140,7 +140,7 @@ export default function LoginPage() {
               alignItems: "center",
             }}
           >
-            <LogoText variant="h1">Govis Task Management</LogoText>
+            <LogoText variant="h1">Govis Task Management System</LogoText>
             {error && (
               <Alert
                 severity="error"
