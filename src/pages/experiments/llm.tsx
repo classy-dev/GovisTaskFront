@@ -27,7 +27,6 @@ interface LLMAnalysisResult {
 
 const EXAMPLE_QUESTIONS = [
   "지금 평가 점수가 가장 높은 직원이 누구지?",
-  "푸드테크본부 직원은 몇 명이야?",
   "백엔드팀 직원 수는?",
   "완료된 작업이 가장 많은 직원은?",
   "이번 달에 지연된 작업은 몇 개야?",
