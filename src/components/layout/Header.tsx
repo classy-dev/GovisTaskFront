@@ -55,7 +55,7 @@ const Header = observer(() => {
 
   const handleLogout = () => {
     authStore.logout();
-    router.push("/login");
+    window.location.replace("/login");
     handleClose();
   };
 
@@ -81,11 +81,10 @@ const Header = observer(() => {
       }}
     >
       <Toolbar>
-   
-        <Typography 
-          variant="h6" 
-          component="div" 
-          sx={{ 
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{
             flexGrow: 1,
             fontWeight: 600,
             background: "linear-gradient(45deg, #2563eb 30%, #3b82f6 90%)",
@@ -93,7 +92,10 @@ const Header = observer(() => {
             WebkitTextFillColor: "transparent",
           }}
         >
-              <Link href="/" style={{ textDecoration: "none", color: "inherit" }}> Govis Task Management</Link>
+          <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
+            {" "}
+            Govis Task Management
+          </Link>
         </Typography>
 
         {authStore.isAuthenticated && (
@@ -101,25 +103,25 @@ const Header = observer(() => {
             <IconButton
               size="large"
               onClick={handleNotificationClick}
-              sx={{ 
+              sx={{
                 transition: "transform 0.2s",
-                "&:hover": { transform: "scale(1.1)" } 
+                "&:hover": { transform: "scale(1.1)" },
               }}
             >
               <Badge badgeContent={notificationCount?.count || 0} color="error">
                 <Notifications />
               </Badge>
             </IconButton>
-            
+
             <IconButton
               onClick={handleProfileClick}
               sx={{
                 transition: "transform 0.2s",
-                "&:hover": { transform: "scale(1.1)" }
+                "&:hover": { transform: "scale(1.1)" },
               }}
             >
-              <Avatar 
-                sx={{ 
+              <Avatar
+                sx={{
                   bgcolor: "primary.main",
                   width: 35,
                   height: 35,
@@ -138,12 +140,12 @@ const Header = observer(() => {
           onClose={handleNotificationClose}
           PaperProps={{
             elevation: 3,
-            sx: { 
-              width: 320, 
+            sx: {
+              width: 320,
               maxHeight: 400,
               mt: 1.5,
               borderRadius: 2,
-              overflow: 'hidden'
+              overflow: "hidden",
             },
           }}
         >
@@ -159,10 +161,10 @@ const Header = observer(() => {
           onClose={handleClose}
           PaperProps={{
             elevation: 3,
-            sx: { 
+            sx: {
               minWidth: 200,
               mt: 1.5,
-              borderRadius: 2
+              borderRadius: 2,
             },
           }}
         >
