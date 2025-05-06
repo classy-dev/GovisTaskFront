@@ -9,9 +9,7 @@
 ![Report 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/report.png)
 
 ![LLM](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/llm.png)
-# GOPIZZA Task Management System (Govis Task)
 
-<img src="public/images/logo.png" alt="GOPIZZA Logo" width="200"/>
 
 ## 프로젝트 개요
 
