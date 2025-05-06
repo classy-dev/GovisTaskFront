@@ -8,7 +8,7 @@
 
 ![평가 및 성과관리 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/report.png)
 
-(https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/llm.png)
+![평가 및 성과관리 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/llm.png)
 
 ## 프로젝트 개요
 
