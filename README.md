@@ -6,13 +6,16 @@
 
 ![평가 및 성과관리 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/evalution.png)
 
-![평가 및 성과관리 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/report.png)
+![Report 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/report.png)
 
-![평가 및 성과관리 이미지](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/llm.png)
+![LLM](https://raw.githubusercontent.com/futureplanning/front-rnd/refs/heads/master/public/llm.png)
+# GOPIZZA Task Management System (Govis Task)
+
+<img src="public/images/logo.png" alt="GOPIZZA Logo" width="200"/>
 
 ## 프로젝트 개요
 
-Govis Task는 고피자의 업무 관리 시스템으로, 조직 내 업무의 복잡성을 효율적으로 관리하기 위해 개발된 스마트 워크 플랫폼입니다. 직급과 권한에 따라 차별화된 인사이트를 제공하여 모든 구성원이 최적의 의사결정을 할 수 있도록 지원합니다. 실시간 업무 진행 상황 모니터링, 투명한 성과 관리, 데이터 기반 의사결정을 통해 조직의 업무 문화를 혁신합니다.
+Govis Task는 고피자의 혁신적인 업무 관리 시스템으로, 조직 내 업무의 복잡성을 효율적으로 관리하기 위해 개발된 스마트 워크 플랫폼입니다. 직급과 권한에 따라 차별화된 인사이트를 제공하여 모든 구성원이 최적의 의사결정을 할 수 있도록 지원합니다. 실시간 업무 진행 상황 모니터링, 투명한 성과 관리, 데이터 기반 의사결정을 통해 조직의 업무 문화를 혁신합니다.
 
 ## 주요 특징
 
@@ -65,6 +68,8 @@ Govis Task는 고피자의 업무 관리 시스템으로, 조직 내 업무의 �
 - **애니메이션**: Framer Motion
 - **알림**: React Toastify
 - **HTTP 클라이언트**: Axios
+
+
 
 ## 프로젝트 구조
 
@@ -134,3 +139,4 @@ Recharts를 활용한 다양한 차트와 그래프로 복잡한 데이터를 �
 2. **투명한 성과 관리**: 객관적인 평가 지표 확보, 공정한 보상 체계 구축, 성과 데이터 자동 집계
 3. **조직 문화 혁신**: 수평적 소통 문화 정착, 데이터 기반 의사결정, 자율적인 업무 환경 조성
 4. **리스크 관리 강화**: 지연 작업 조기 발견, 병목 구간 식별, 선제적 대응 가능
+
